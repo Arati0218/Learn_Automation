@@ -24,7 +24,7 @@ jobs:
       uses: browser-actions/setup-chrome@v1
 
     - name: Install ChromeDriver
-      run: sudo apt-get install -y chromium-chromedriver
+      uses: nanasess/setup-chromedriver@v2
 
     - name: Run CI/CD Pipeline
       run: mvn test
