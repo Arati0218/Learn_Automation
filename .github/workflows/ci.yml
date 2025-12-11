@@ -28,5 +28,12 @@ jobs:
 
     - name: Run CI/CD Pipeline
       run: mvn test
+
+    - name: Upload Surefire Reports
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: surefire-reports
+        path: target/surefire-reports
       env:
         DISPLAY: :99
